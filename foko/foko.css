@@ -1,0 +1,764 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #000;
+  line-height: 1.6;
+  background-color: white;
+}
+
+a {
+  text-decoration: none;
+}
+
+.nav-bar {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  margin-top: 20px;
+  background-color: white;
+  gap: 20px;
+  text-align: center;
+  transform: translateX(
+    -50%
+  ); /*this shifts it left by 50% of its own width, perfectly centering it*/
+  box-sizing: border-box;
+  user-select: none;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px gray;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.logo p {
+  font-size: 30px;
+  font-weight: 600;
+  color: #1ea1f2;
+}
+.logo img {
+  height: 50px;
+  width: 50px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+ol {
+  list-style: none;
+  display: flex;
+  gap: 50px;
+  font-size: 30px;
+  font-weight: 500;
+  color: gray;
+}
+
+ol li:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  color: #0096ff;
+}
+
+.hero {
+  background-image:
+    linear-gradient(rgb(0, 0, 0, 0.4), rgb(0, 0, 0, 0.4)),
+    url(/image/newback.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  background-attachment: fixed;
+  padding-bottom: 10em;
+  padding-top: 5em;
+}
+
+.hero-content {
+  color: #fff;
+  margin: 100px 0 0 100px;
+  left: auto;
+}
+
+.hero-tag {
+  color: #fff;
+}
+
+.hero-content h1 {
+  font-size: 60px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+span {
+  color: #1ea1f2;
+}
+
+.hero-text {
+  color: #000;
+  font-size: 25px;
+  font-weight: 600;
+  opacity: 0.7;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 25px;
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 50px;
+}
+
+.icon {
+  color: #fff;
+  background-color: grey;
+  height: 100px;
+  border-radius: 10px;
+}
+.hero-content,
+.hero-form {
+  flex: 1;
+}
+
+form {
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(30px);
+  border-radius: 30px;
+  width: 70%;
+  margin: 100px 0 0 100px;
+}
+
+label {
+  font-size: 20px;
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #fff;
+}
+
+input,
+textarea {
+  background: transparent;
+  height: 60px;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  width: 100%;
+  margin-bottom: 20px;
+  outline: none;
+  color: #000;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+button {
+  width: 100%;
+  padding: 20px;
+  align-self: center;
+  background-image: linear-gradient(to bottom, #695ce6, #637fb6);
+  border: none;
+}
+
+.first-form p {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.first-form input:focus {
+  border-color: #695ce6;
+  outline: none;
+}
+
+.first-form textarea:focus {
+  border-color: #695ce6;
+  outline: none;
+}
+
+input::placeholder {
+  font-size: 20px;
+  color: #000;
+  opacity: 0.4;
+}
+
+.first-form textarea::placeholder {
+  font-size: 20px;
+  color: #000;
+  opacity: 0.4;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  margin-top: 5em;
+  gap: 20em;
+}
+
+.head {
+  font-size: 5em;
+  font-weight: 500;
+  font-family: serif;
+  line-height: 1;
+  margin-bottom: 0.5em;
+}
+
+.poster {
+  display: flex;
+  justify-content: center;
+}
+
+.all {
+  display: flex;
+  justify-content: center;
+  margin-left: 50%;
+  margin-top: 30px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #1ea1f2;
+  margin-bottom: 30px;
+}
+
+.card {
+  box-shadow: 0 0 8px #1ea1f2;
+  border-radius: 20px;
+  margin: 20px;
+  overflow: hidden;
+}
+
+.card-image img {
+  width: 100%;
+  height: auto;
+}
+
+.card-content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 20px;
+}
+
+.card-head {
+  font-size: 25px;
+  font-weight: 600;
+  margin: 10px;
+}
+
+.card-description {
+  font-size: 15px;
+  font-weight: 400;
+  margin: 10px 15px 30px;
+}
+
+.card:hover {
+  cursor: pointer;
+  transform: scale(1.02);
+  transition: 0.3s;
+}
+
+.banner {
+  display: flex;
+  flex-direction: column;
+}
+
+.banner-image img {
+  width: 100%;
+  height: 50hv;
+}
+
+.banner-content {
+  background-color: #0d76c2;
+  padding: 5em;
+}
+
+.banner-head {
+  font-family: serif;
+  font-size: 5em;
+  font-weight: 500;
+  color: #fff;
+}
+
+.banner-description {
+  color: #fff;
+  font-size: 20px;
+}
+
+.sp {
+  color: #fff;
+  display: flex;
+  justify-content: end;
+}
+
+.images {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 50px;
+  width: 100%;
+}
+
+.border {
+  position: relative;
+
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  border: 1px solid grey;
+}
+
+.overlay1 {
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.overlay1 img {
+  width: 100%;
+  height: 30vh;
+}
+.overlay2 {
+  height: 65%;
+  background-color: #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+.overlay3 {
+  width: 100%;
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+.overlay3 img {
+  width: 100%;
+  height: 30vh;
+}
+
+.img {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+.badge-courier {
+  position: absolute;
+  top: -90px;
+  z-index: 10;
+}
+
+.badge-road {
+  position: absolute;
+  top: -50px;
+  left: 200px;
+}
+
+.overlay4 {
+  width: 100%;
+  height: 65%;
+  background-color: #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.overlay5 {
+  width: 100%;
+  height: 65%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.overlay5 img {
+  width: 100%;
+  height: 30vh;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.overlay4 img {
+  width: 100%;
+  height: 30vh;
+}
+
+.images h2 {
+  font-family: serif;
+}
+
+.images p {
+  color: #000;
+  opacity: 0.7;
+}
+
+.img h2 {
+  font-family: serif;
+}
+
+.img p {
+  color: #000;
+  opacity: 0.7;
+}
+
+.ending {
+  background-color: #0096ff;
+  margin-top: 80px;
+  background-size: cover;
+}
+
+.ending-head {
+  text-align: center;
+  padding-top: 1em;
+  font-weight: 900;
+  font-size: 40px;
+  color: #fff;
+}
+
+.ending-details {
+  text-align: center;
+  color: #fff;
+}
+
+.background {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: -5vh;
+  background-color: #fff;
+  margin: 50px 20em 8em;
+  border-radius: 20px;
+}
+
+.last-form {
+  background-color: rgba(192, 235, 220, 0.623);
+  margin: 50px 200px;
+}
+
+.info {
+  margin-left: 50px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.last-form p {
+  text-align: center;
+  color: #000;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.last-form label {
+  color: black;
+}
+
+.last-form input::placeholder,
+textarea::placeholder {
+  color: #000;
+  opacity: 0.4;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.last-form textarea:focus {
+  border-color: blue;
+  outline: none;
+}
+
+.last-form input:focus {
+  border-color: blue;
+  outline: none;
+}
+
+.last-form input {
+  border-color: grey;
+  font-size: 20px;
+}
+
+.last-form textarea {
+  border-color: grey;
+  font-size: 20px;
+}
+
+button {
+  border-radius: 50px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.phone {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.email {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+}
+.info img {
+  height: 50px;
+  background-color: rgb(1, 149, 255, 0.3);
+  padding: 5px;
+  border-radius: 30px;
+}
+
+.footer {
+  font-size: 15px;
+  color: #fff;
+  letter-spacing: 1px;
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 576px) {
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  .nav-bar {
+    position: fixed;
+    width: 90%;
+    gap: 10px;
+    padding: 5px;
+    height: 70px;
+  }
+
+  .logo {
+    display: flex;
+    gap: 5px;
+  }
+
+  .logo p {
+    font-size: 15px;
+    font-weight: 400;
+    color: #007bff;
+    letter-spacing: 1px;
+  }
+
+  .logo img {
+    height: 30px;
+    width: 30px;
+  }
+
+  ol {
+    gap: 10px;
+    font-size: 15px;
+  }
+
+  ol li:hover {
+    color: #007bff;
+    text-decoration: none;
+  }
+
+  .hero {
+    display: flex;
+    flex-direction: column;
+  }
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .hero-tag {
+    margin-top: 2em;
+    font-size: 5px;
+    font-weight: 100;
+    letter-spacing: 1px;
+  }
+
+  .hero-content h1 {
+    margin-top: -50px;
+    font-size: 30px;
+    font-weight: 500;
+  }
+
+  .hero-text {
+    width: 100%;
+    line-height: 1.4;
+    font-size: 10px;
+    margin: 5px 2px 10px;
+  }
+
+  form {
+    margin: 0 auto -50px;
+    width: 95%;
+    border-radius: 10px;
+    border: 1px solid grey;
+    padding: 25px;
+    height: 90%;
+  }
+
+  label {
+    display: block;
+    margin-bottom: -10px;
+    letter-spacing: 1px;
+  }
+
+  input::placeholder {
+    color: #fff;
+  }
+
+  .first-form textarea::placeholder {
+    color: #fff;
+  }
+
+  input,
+  textarea {
+    color: #fff;
+  }
+
+  button {
+    padding: 15px;
+    letter-spacing: 1px;
+    font-weight: 400;
+    font-size: 25px;
+  }
+
+  .main {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    gap: 2px;
+  }
+
+  .head {
+    font-size: 2em;
+    font-family: "Segoe UI", Arial, sans-serif;
+    letter-spacing: 1px;
+  }
+
+  .poster {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .all {
+    font-size: small;
+    text-align: center;
+    margin: 20px auto;
+  }
+
+  .card img {
+    width: 100%;
+  }
+
+  .card-content {
+    text-align: center;
+  }
+
+  .banner {
+    margin: auto;
+    text-align: center;
+  }
+
+  .banner-content {
+    padding: 5px;
+  }
+
+  .banner-head {
+    font-size: 2em;
+    font-family: "Segoe UI", Arial, sans-serif;
+  }
+
+  .banner-description {
+    font-size: 10px;
+  }
+
+  .sp {
+    text-align: center;
+  }
+
+  .images {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .border {
+    margin: 2em 1em 5em;
+    text-align: center;
+    padding: 5px;
+  }
+  .overlay2 {
+    height: 30vh;
+  }
+  .image-content {
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .img {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .background {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 3px;
+  }
+
+  .last-form {
+    margin: 30px 10px;
+  }
+
+  .info {
+    padding-top: 20px;
+  }
+
+  .phone {
+    text-align: center;
+    transform: translateX(10%);
+  }
+
+  .email {
+    text-align: center;
+    transform: translateX(-10%);
+  }
+
+  .location {
+    text-align: center;
+  }
+
+  .footer {
+    text-align: center;
+    padding: 20px;
+  }
+}
