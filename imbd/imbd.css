@@ -1,0 +1,109 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav {
+  display: flex;
+  background-color: #121212;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 7px;
+  font-family: Anton;
+  font-size: 25px;
+  font-weight: 900;
+  color: #121212;
+  background-color: rgb(255, 230, 2);
+  margin-left: 40px;
+  margin-right: 5px;
+  letter-spacing: 1.5px;
+  height: 30px;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  width: 100px;
+  height: 50p;
+  color: #fff;
+  font-family: sans-serif;
+  font-weight: 600;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.select-search {
+  display: flex;
+  background-color: lightblue;
+  width: 600px;
+  margin-right: 20px;
+  flex: 1;
+}
+
+.select {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.otherm {
+  display: flex;
+}
+
+.pro {
+  width: 100px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  background-color: lightpink;
+}
+
+.line {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.whatch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightblue;
+  width: 120px;
+  margin-right: 10px;
+}
+
+.sign {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightpink;
+  width: 100px;
+}
+
+.select-2 {
+  margin-left: 20px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightblue;
+  width: 70px;
+}

@@ -1,0 +1,23 @@
+body {
+  height: 500vh;
+  box-sizing: border-box;
+}
+.nav {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 50%;
+  transform: translateX(50%);
+  gap: 2em;
+  margin: 50px;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
